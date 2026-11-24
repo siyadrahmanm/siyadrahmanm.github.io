@@ -147,6 +147,15 @@ h1 {
   hyphens: auto;
 }
 
+.bio a {
+    color: blue;
+    text-decoration: none;
+}
+
+.bio a:hover {
+   color: var(--accent);
+    text-decoration: underline;
+}
 /* ==============================
    DECORATIVE DIVIDER
 ============================== */
