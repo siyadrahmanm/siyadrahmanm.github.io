@@ -384,3 +384,19 @@ h1 {
   text-align: center;
 }
 
+.research-interests {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.research-interests span:not(:last-child)::after {
+  content: "•";
+  color: #3b82b8;
+  margin-left: 12px;
+  font-weight: bold;
+}
