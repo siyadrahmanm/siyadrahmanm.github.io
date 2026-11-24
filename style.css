@@ -226,7 +226,7 @@ h1 {
 
   gap: 16px 36px;
 
-  margin: 0 auto 35px; /* Space below menu */
+  margin: 10px auto 35px; /* Space below menu */
   padding: 0 10px;
 
   font-size: 0.76rem;
@@ -399,6 +399,7 @@ h1 {
 .research-interests span:not(:last-child)::after {
   content: "•";
   color: #3b82b8;
-  margin-left: 12px;
+  text-align: center;
+   /* margin-left: 12px; */
   font-weight: bold;
 }
