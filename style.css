@@ -12,6 +12,8 @@
   --accent: #a83e50;
   --accent-light: #ead5d5;
   --border: #e9e1d6;
+
+  --content-width: 650px;
 }
 
 /* ==============================
@@ -31,6 +33,7 @@ body {
   min-height: 100vh;
 
   font-family: 'DM Sans', sans-serif;
+
   background:
     radial-gradient(
       ellipse at top,
@@ -48,11 +51,11 @@ body {
 ============================== */
 
 .container {
-  width: min(100% - 48px, 760px);
+  width: min(calc(100% - 48px), 760px);
   min-height: 100vh;
 
-  margin-inline: auto;
-  padding: clamp(80px, 13vh, 140px) 0 70px;
+  margin: 0 auto;
+  padding: clamp(55px, 9vh, 100px) 0 65px;
 
   display: flex;
   flex-direction: column;
@@ -69,8 +72,8 @@ body {
 .avatar {
   display: block;
 
-  width: 150px;
-  height: 150px;
+  width: 145px;
+  height: 145px;
 
   object-fit: cover;
   border-radius: 50%;
@@ -79,7 +82,7 @@ body {
   border: 1px solid var(--accent-light);
   background: var(--surface);
 
-  margin: 30px auto 38px;
+  margin: 0 auto 30px;
 
   box-shadow:
     0 10px 35px rgba(70, 40, 35, 0.09);
@@ -101,21 +104,20 @@ body {
 ============================== */
 
 h1 {
-  max-width: 650px;
+  width: 100%;
+  max-width: var(--content-width);
 
-  margin: 0 auto 24px;
+  margin: 0 auto 22px;
 
   font-family: 'Libre Baskerville', serif;
   font-size: clamp(2.1rem, 5vw, 3.2rem);
 
   font-weight: 400;
-  line-height: 1.35;
+  line-height: 1.3;
   letter-spacing: -0.045em;
 
   text-align: center;
 }
-
-/* Accent text */
 
 .accent {
   color: var(--accent);
@@ -128,18 +130,21 @@ h1 {
 
 .bio {
   width: 100%;
-  max-width: 600px;
+  max-width: 590px;
 
-  margin: 0 auto 38px;
+  margin: 0 auto 30px;
 
   font-size: 1rem;
-  line-height: 2;
+  line-height: 1.95;
   letter-spacing: 0.005em;
 
   color: var(--muted);
 
-  text-align: center;
+  text-align: justify;
+  text-align-last: left;
+
   text-wrap: pretty;
+  hyphens: auto;
 }
 
 /* ==============================
@@ -156,7 +161,7 @@ h1 {
 
   background: var(--accent-light);
 
-  margin: 0 auto 32px;
+  margin: 0 auto 28px;
 }
 
 /* ==============================
@@ -168,10 +173,10 @@ h1 {
   align-items: center;
   justify-content: center;
 
-  gap: 18px;
+  gap: 17px;
 
   width: 100%;
-  margin: 0 auto 42px;
+  margin: 0 auto 30px;
 }
 
 .icons a {
@@ -218,15 +223,16 @@ h1 {
 
 .menu {
   width: 100%;
+  max-width: var(--content-width);
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 
-  gap: 16px 36px;
+  gap: 12px 34px;
 
-  margin: 10px auto 35px; /* Space below menu */
+  margin: 0 auto 32px;
   padding: 0 10px;
 
   font-size: 0.76rem;
@@ -239,6 +245,7 @@ h1 {
 .menu a {
   position: relative;
   display: inline-block;
+
   padding: 8px 2px;
 
   text-decoration: none;
@@ -248,10 +255,9 @@ h1 {
   transition: color 0.25s ease;
 }
 
-/* Animated underline */
-
 .menu a::after {
   content: "";
+
   position: absolute;
   left: 0;
   bottom: 2px;
@@ -260,6 +266,7 @@ h1 {
   height: 1px;
 
   background: var(--accent);
+
   transition: width 0.3s ease;
 }
 
@@ -269,6 +276,52 @@ h1 {
 
 .menu a:hover::after {
   width: 100%;
+}
+
+/* ==============================
+   SECTION HEADINGS
+============================== */
+
+.section-heading {
+  width: 100%;
+  max-width: var(--content-width);
+
+  margin: 0 auto 18px;
+
+  text-align: center;
+}
+
+/* ==============================
+   RESEARCH INTERESTS
+============================== */
+
+.research-interests {
+  width: 100%;
+  max-width: 590px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px 12px;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #444;
+  text-align: center;
+}
+
+.research-interests span:not(:last-child)::after {
+  content: "•";
+
+  color: #3b82b8;
+  font-weight: bold;
+
+  margin-left: 12px;
 }
 
 /* ==============================
@@ -288,51 +341,58 @@ h1 {
 
   .container {
     width: calc(100% - 40px);
-
     min-height: 100svh;
 
-    padding: 65px 0 50px;
+    padding: 50px 0 45px;
   }
 
   .avatar {
     width: 125px;
     height: 125px;
 
-    margin-bottom: 30px;
+    margin-bottom: 27px;
   }
 
   h1 {
     font-size: clamp(2rem, 9vw, 2.6rem);
+    line-height: 1.35;
 
-    line-height: 1.4;
-
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .bio {
-    max-width: 440px;
+    max-width: 100%;
 
     font-size: 0.93rem;
-    line-height: 1.9;
+    line-height: 1.85;
 
-    margin-bottom: 30px;
+    margin-bottom: 26px;
+
+    text-align: justify;
+    text-align-last: left;
   }
 
   .container::after {
-    margin-bottom: 27px;
+    margin-bottom: 25px;
   }
 
   .icons {
     gap: 15px;
-
-    margin-bottom: 34px;
+    margin-bottom: 27px;
   }
 
   .menu {
-    gap: 10px 23px;
+    gap: 9px 22px;
 
     font-size: 0.7rem;
     letter-spacing: 0.1em;
+
+    margin-bottom: 28px;
+  }
+
+  .research-interests {
+    font-size: 14px;
+    gap: 7px 10px;
   }
 }
 
@@ -357,6 +417,7 @@ h1 {
 
   .bio {
     font-size: 0.88rem;
+    line-height: 1.8;
   }
 
   .menu {
@@ -377,29 +438,4 @@ h1 {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
-}
-
-/* Section Heading */
-.section-heading {
-  text-align: center;
-}
-
-.research-interests {
-  max-width: 650px;
-   text-align: center;
-   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 12px;
-  font-size: 15px;
-  line-height: 1.8;
-  color: #444;
-}
-
-.research-interests span:not(:last-child)::after {
-  content: "•";
-  color: #3b82b8;
-  text-align: center;
-   /* margin-left: 12px; */
-  font-weight: bold;
 }
