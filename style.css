@@ -1,4 +1,206 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+:root {
+  --bg: #faf7f0;
+  --surface: #fffdf8;
+  --text: #292522;
+  --muted: #82776e;
+  --accent: #a83e50;
+  --accent-light: #ead5d5;
+  --border: #e9e1d6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background:
+    radial-gradient(ellipse at top, #fffdf9 0%, transparent 70%),
+    var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 760px;
+  margin: auto;
+  padding: 6rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Profile image */
+
+.avatar {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 5px;
+  border: 1px solid var(--accent-light);
+  background: var(--surface);
+  box-shadow: 0 10px 35px rgba(70, 40, 35, 0.09);
+  margin-bottom: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.04);
+  box-shadow: 0 14px 40px rgba(70, 40, 35, 0.15);
+}
+
+/* Heading */
+
+h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.3;
+  margin: 0 0 1.2rem;
+}
+
+.accent {
+  color: var(--accent);
+  font-style: italic;
+}
+
+/* Bio */
+
+.bio {
+  max-width: 570px;
+  font-size: 1rem;
+  line-height: 2;
+  color: var(--muted);
+  font-weight: 400;
+  margin: 0 auto 2.2rem;
+}
+
+/* Decorative divider */
+
+.container::after {
+  content: "";
+  width: 45px;
+  height: 1px;
+  background: var(--accent-light);
+  margin: 0 auto 2rem;
+  order: 1;
+}
+
+/* Social icons */
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.icons a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: rgba(255, 253, 248, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.icons a:hover {
+  color: white;
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(168, 62, 80, 0.18);
+}
+
+/* Navigation */
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  order: 2;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--accent);
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 600px) {
+  .container {
+    padding: 4rem 1.5rem;
+  }
+
+  .avatar {
+    width: 130px;
+    height: 130px;
+  }
+
+  .bio {
+    font-size: 0.95rem;
+    line-height: 1.9;
+  }
+
+  .menu {
+    gap: 1.2rem;
+    font-size: 0.72rem;
+  }
+}
+
+::selection {
+  background: var(--accent-light);
+  color: var(--text);
+}
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
 :root {
   --bg: #fdfaf4;
@@ -82,4 +284,4 @@ h1 {
 
 .menu a:hover {
   text-decoration: underline;
-}
+} */
