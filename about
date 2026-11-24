@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biography</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
+
+  <section>
+    <h2>About me</h2>
+    <p class="bio">
+      I am a PhD student in Mathematics at the <a href="https://iitbmonash.org/">IITB-Monash Research Academy</a>, working under the guidance of <a href="https://www.math.iitb.ac.in/~neela/">Prof. Neela Nataraj</a> (IIT Bombay) and <a href="https://ruizbaier.github.io/">Prof. Ricardo Ruiz Baier</a> (Monash University).</p>
+      <p class="bio">I am originally from <a href="https://en.wikipedia.org/wiki/Nilambur">Nilambur, Kerala</a>. I completed my Bachelor’s degree in Mathematics at <a href="https://mesmampadcollege.edu.in/">MES Mampad College (Autonomous)</a>, University of Calicut, followed by a Master’s degree from <a href="https://www.iisertvm.ac.in/">IISER Thiruvananthapuram</a>.</p>
+      <p class="bio">My research interests lie in partial differential equations, numerical analysis, and finite element methods.
+    </p>
+  </section>
+
+</body>
+</html>
