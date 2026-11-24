@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
 
+/* ==============================
+   COLOUR PALETTE
+============================== */
+
 :root {
   --bg: #faf7f0;
   --surface: #fffdf8;
@@ -9,6 +13,10 @@
   --accent-light: #ead5d5;
   --border: #e9e1d6;
 }
+
+/* ==============================
+   GLOBAL STYLES
+============================== */
 
 * {
   box-sizing: border-box;
@@ -20,146 +28,244 @@ html {
 
 body {
   margin: 0;
+  min-height: 100vh;
+
   font-family: 'DM Sans', sans-serif;
   background:
-    radial-gradient(ellipse at top, #fffdf9 0%, transparent 70%),
+    radial-gradient(
+      ellipse at top,
+      #fffdf9 0%,
+      transparent 70%
+    ),
     var(--bg);
+
   color: var(--text);
   -webkit-font-smoothing: antialiased;
 }
 
+/* ==============================
+   MAIN CONTAINER
+============================== */
+
 .container {
+  width: min(100% - 48px, 760px);
   min-height: 100vh;
-  max-width: 760px;
-  margin: auto;
-  padding: 6rem 2rem 4rem;
+
+  margin-inline: auto;
+  padding: clamp(80px, 13vh, 140px) 0 70px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   text-align: center;
 }
 
-/* Profile image */
+/* ==============================
+   PROFILE IMAGE
+============================== */
 
 .avatar {
-  width: 155px;
-  height: 155px;
-  border-radius: 50%;
+  display: block;
+
+  width: 150px;
+  height: 150px;
+
   object-fit: cover;
+  border-radius: 50%;
+
   padding: 5px;
   border: 1px solid var(--accent-light);
   background: var(--surface);
-  box-shadow: 0 10px 35px rgba(70, 40, 35, 0.09);
-  margin-bottom: 2rem;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  margin: 0 auto 38px;
+
+  box-shadow:
+    0 10px 35px rgba(70, 40, 35, 0.09);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .avatar:hover {
   transform: scale(1.04);
-  box-shadow: 0 14px 40px rgba(70, 40, 35, 0.15);
+
+  box-shadow:
+    0 14px 40px rgba(70, 40, 35, 0.15);
 }
 
-/* Heading */
+/* ==============================
+   MAIN HEADING
+============================== */
 
 h1 {
+  max-width: 650px;
+
+  margin: 0 auto 24px;
+
   font-family: 'Libre Baskerville', serif;
-  font-size: clamp(2.2rem, 6vw, 3.2rem);
+  font-size: clamp(2.1rem, 5vw, 3.2rem);
+
   font-weight: 400;
+  line-height: 1.35;
   letter-spacing: -0.045em;
-  line-height: 1.3;
-  margin: 0 0 1.2rem;
+
+  text-align: center;
 }
+
+/* Accent text */
 
 .accent {
   color: var(--accent);
   font-style: italic;
 }
 
-/* Bio */
+/* ==============================
+   BIO / INTRODUCTION
+============================== */
 
 .bio {
-  max-width: 570px;
+  width: 100%;
+  max-width: 530px;
+
+  margin: 0 auto 38px;
+
   font-size: 1rem;
   line-height: 2;
+  letter-spacing: 0.005em;
+
   color: var(--muted);
-  font-weight: 400;
-  margin: 0 auto 2.2rem;
+
+  text-align: center;
+  text-wrap: pretty;
 }
 
-/* Decorative divider */
+/* ==============================
+   DECORATIVE DIVIDER
+============================== */
 
 .container::after {
   content: "";
+
+  display: block;
+
   width: 45px;
   height: 1px;
+
   background: var(--accent-light);
-  margin: 0 auto 2rem;
-  order: 1;
+
+  margin: 0 auto 32px;
 }
 
-/* Social icons */
+/* ==============================
+   SOCIAL ICONS
+============================== */
 
 .icons {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  justify-content: center;
+
+  gap: 18px;
+
+  width: 100%;
+  margin: 0 auto 42px;
 }
 
 .icons a {
   width: 42px;
   height: 42px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: var(--accent);
   font-size: 1.15rem;
+
   border: 1px solid var(--border);
   border-radius: 50%;
+
   background: rgba(255, 253, 248, 0.7);
+
   text-decoration: none;
-  transition: all 0.3s ease;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .icons a:hover {
   color: white;
+
   background: var(--accent);
   border-color: var(--accent);
+
   transform: translateY(-4px);
-  box-shadow: 0 5px 15px rgba(168, 62, 80, 0.18);
+
+  box-shadow:
+    0 5px 15px rgba(168, 62, 80, 0.18);
 }
 
-/* Navigation */
+/* ==============================
+   NAVIGATION MENU
+============================== */
 
 .menu {
+  width: 100%;
+
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem 2rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
+
+  gap: 16px 36px;
+
+  margin: 0 auto;
+  padding: 0 10px;
+
+  font-size: 0.76rem;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-  order: 2;
+
+  text-align: center;
 }
 
 .menu a {
   position: relative;
+
+  display: inline-block;
+
+  padding: 8px 2px;
+
   text-decoration: none;
   color: var(--muted);
+
   font-weight: 600;
+
   transition: color 0.25s ease;
 }
 
+/* Animated underline */
+
 .menu a::after {
   content: "";
+
   position: absolute;
+
   left: 0;
-  bottom: -6px;
+  bottom: 2px;
+
   width: 0;
   height: 1px;
+
   background: var(--accent);
+
   transition: width 0.3s ease;
 }
 
@@ -171,32 +277,112 @@ h1 {
   width: 100%;
 }
 
-/* Mobile responsiveness */
-
-@media (max-width: 600px) {
-  .container {
-    padding: 4rem 1.5rem;
-  }
-
-  .avatar {
-    width: 130px;
-    height: 130px;
-  }
-
-  .bio {
-    font-size: 0.95rem;
-    line-height: 1.9;
-  }
-
-  .menu {
-    gap: 1.2rem;
-    font-size: 0.72rem;
-  }
-}
+/* ==============================
+   TEXT SELECTION
+============================== */
 
 ::selection {
   background: var(--accent-light);
   color: var(--text);
+}
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: calc(100% - 40px);
+
+    min-height: 100svh;
+
+    padding: 65px 0 50px;
+  }
+
+  .avatar {
+    width: 125px;
+    height: 125px;
+
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+
+    line-height: 1.4;
+
+    margin-bottom: 20px;
+  }
+
+  .bio {
+    max-width: 440px;
+
+    font-size: 0.93rem;
+    line-height: 1.9;
+
+    margin-bottom: 30px;
+  }
+
+  .container::after {
+    margin-bottom: 27px;
+  }
+
+  .icons {
+    gap: 15px;
+
+    margin-bottom: 34px;
+  }
+
+  .menu {
+    gap: 10px 23px;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+/* ==============================
+   SMALL MOBILE SCREENS
+============================== */
+
+@media (max-width: 360px) {
+
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .avatar {
+    width: 115px;
+    height: 115px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .bio {
+    font-size: 0.88rem;
+  }
+
+  .menu {
+    gap: 8px 16px;
+  }
+}
+
+/* ==============================
+   REDUCED MOTION ACCESSIBILITY
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
 
 
