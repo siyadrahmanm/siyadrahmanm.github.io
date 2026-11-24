@@ -226,7 +226,7 @@ h1 {
 
   gap: 16px 36px;
 
-  margin: 0 auto;
+  margin: 0 auto 35px; /* Space below menu */
   padding: 0 10px;
 
   font-size: 0.76rem;
@@ -238,14 +238,11 @@ h1 {
 
 .menu a {
   position: relative;
-
   display: inline-block;
-
   padding: 8px 2px;
 
   text-decoration: none;
   color: var(--muted);
-
   font-weight: 600;
 
   transition: color 0.25s ease;
@@ -255,9 +252,7 @@ h1 {
 
 .menu a::after {
   content: "";
-
   position: absolute;
-
   left: 0;
   bottom: 2px;
 
@@ -265,7 +260,6 @@ h1 {
   height: 1px;
 
   background: var(--accent);
-
   transition: width 0.3s ease;
 }
 
