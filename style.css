@@ -148,7 +148,7 @@ h1 {
 }
 
 .bio a {
-    color: blue;
+    color: var(--accent);
     text-decoration: none;
 }
 
