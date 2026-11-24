@@ -79,7 +79,7 @@ body {
   border: 1px solid var(--accent-light);
   background: var(--surface);
 
-  margin: 0 auto 38px;
+  margin: 30px auto 38px;
 
   box-shadow:
     0 10px 35px rgba(70, 40, 35, 0.09);
