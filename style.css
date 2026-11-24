@@ -128,7 +128,7 @@ h1 {
 
 .bio {
   width: 100%;
-  max-width: 530px;
+  max-width: 600px;
 
   margin: 0 auto 38px;
 
@@ -399,4 +399,6 @@ h1 {
   color: #3b82b8;
   margin-left: 12px;
   font-weight: bold;
+   max-width: 650px;
+text-align: center;
 }
