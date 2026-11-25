@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 4.5rem auto;
   min-height: 100vh;
 
   font-family: 'DM Sans', sans-serif;
