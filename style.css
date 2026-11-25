@@ -451,117 +451,179 @@ h1 {
 
 
 
+/* ==============================
+   Teaching
+================================ */
+
 .teaching-section {
-  margin: 3.5rem 0;
+  max-width: 900px;
+  width: 100%;
+  margin: 4.5rem auto;
+  padding: 0 25px;
+  box-sizing: border-box;
+  color: #292724;
   font-family: inherit;
-  color: #242424;
 }
 
-.section-heading {
-  font-size: 1.45rem;
+/* Main heading */
+.teaching-title {
+  font-size: 1.8rem;
   font-weight: 600;
-  letter-spacing: -0.04em;
-  margin-bottom: 1.6rem;
+  letter-spacing: -0.055em;
+  color: #242424;
+  margin: 0 0 3.2rem;
+}
+
+/* Category sections */
+.teaching-category {
+  margin-bottom: 3.5rem;
+}
+
+/* Subheadings */
+.teaching-subtitle {
+  font-size: 1.12rem;
+  font-weight: 550;
+  letter-spacing: -0.035em;
+  color: #98675e;
+  margin: 0 0 1.25rem;
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-.section-heading::after {
+.teaching-subtitle::after {
   content: "";
   height: 1px;
-  background: #e8e5e1;
+  background: #eae6e1;
   flex: 1;
 }
 
+/* Table-like list */
 .teaching-list {
-  border-top: 1px solid #eae7e3;
+  border-top: 1px solid #e8e4df;
 }
 
 .teaching-item {
   display: grid;
-  grid-template-columns: 145px minmax(0, 1fr) 180px;
+  grid-template-columns: 150px minmax(0, 1fr) 145px;
   align-items: center;
-  gap: 22px;
-  padding: 21px 2px;
-  border-bottom: 1px solid #eae7e3;
-  transition: background 0.25s ease, padding 0.25s ease;
+  gap: 24px;
+  padding: 22px 12px;
+  border-bottom: 1px solid #e8e4df;
+  transition: background 0.25s ease;
 }
 
 .teaching-item:hover {
   background: #faf9f7;
-  padding-left: 12px;
-  padding-right: 12px;
 }
 
-.teaching-date {
+/* Period */
+.teaching-period {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.79rem;
-  color: #98675e;
-  letter-spacing: -0.025em;
+  font-size: 0.73rem;
+  color: #a0786d;
+  letter-spacing: -0.02em;
   white-space: nowrap;
 }
 
-.teaching-details h3 {
-  font-size: 1.08rem;
+/* Course */
+.teaching-course h4 {
+  font-size: 0.99rem;
   font-weight: 550;
   letter-spacing: -0.025em;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #302e2a;
   margin: 0;
-  color: #242424;
 }
 
-.teaching-details h3 span {
-  color: #a69e96;
+.teaching-course h4 span {
+  color: #b8afa6;
   font-weight: 400;
+  padding: 0 2px;
 }
 
-.teaching-role {
+.teaching-course p {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.72rem;
-  color: #99918a;
-  margin: 4px 0 0;
-  letter-spacing: 0.015em;
+  font-size: 0.69rem;
+  color: #999188;
+  margin: 5px 0 0;
 }
 
+/* Institution */
 .teaching-institution {
   text-align: right;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.76rem;
-  color: #77716c;
+  font-size: 0.71rem;
+  color: #827b73;
   letter-spacing: -0.025em;
 }
 
-/* Responsive layout */
+/* ==============================
+   Responsive
+================================ */
+
 @media (max-width: 700px) {
-  .teaching-item {
-    grid-template-columns: 1fr auto;
-    gap: 8px 12px;
-    padding: 17px 2px;
+
+  .teaching-section {
+    margin: 3rem auto;
+    padding: 0 18px;
   }
 
-  .teaching-date {
+  .teaching-title {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .teaching-category {
+    margin-bottom: 2.8rem;
+  }
+
+  .teaching-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .teaching-item {
+    grid-template-columns: 1fr auto;
+    gap: 9px 12px;
+    padding: 19px 10px;
+  }
+
+  .teaching-period {
     grid-column: 1;
     grid-row: 1;
-    font-size: 0.72rem;
+    font-size: 0.68rem;
   }
 
   .teaching-institution {
     grid-column: 2;
     grid-row: 1;
-    font-size: 0.68rem;
+    font-size: 0.66rem;
   }
 
-  .teaching-details {
+  .teaching-course {
     grid-column: 1 / -1;
     grid-row: 2;
   }
 
-  .teaching-details h3 {
-    font-size: 1rem;
+  .teaching-course h4 {
+    font-size: 0.96rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .teaching-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
-  .teaching-section {
-    margin: 2.5rem 0;
+  .teaching-period,
+  .teaching-institution,
+  .teaching-course {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .teaching-institution {
+    text-align: left;
   }
 }
