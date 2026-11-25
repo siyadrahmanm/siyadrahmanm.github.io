@@ -448,3 +448,120 @@ h1 {
     animation-duration: 0.01ms !important;
   }
 }
+
+
+
+.teaching-section {
+  margin: 3.5rem 0;
+  font-family: inherit;
+  color: #242424;
+}
+
+.section-heading {
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.section-heading::after {
+  content: "";
+  height: 1px;
+  background: #e8e5e1;
+  flex: 1;
+}
+
+.teaching-list {
+  border-top: 1px solid #eae7e3;
+}
+
+.teaching-item {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr) 180px;
+  align-items: center;
+  gap: 22px;
+  padding: 21px 2px;
+  border-bottom: 1px solid #eae7e3;
+  transition: background 0.25s ease, padding 0.25s ease;
+}
+
+.teaching-item:hover {
+  background: #faf9f7;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.teaching-date {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.79rem;
+  color: #98675e;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+}
+
+.teaching-details h3 {
+  font-size: 1.08rem;
+  font-weight: 550;
+  letter-spacing: -0.025em;
+  line-height: 1.5;
+  margin: 0;
+  color: #242424;
+}
+
+.teaching-details h3 span {
+  color: #a69e96;
+  font-weight: 400;
+}
+
+.teaching-role {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  color: #99918a;
+  margin: 4px 0 0;
+  letter-spacing: 0.015em;
+}
+
+.teaching-institution {
+  text-align: right;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  color: #77716c;
+  letter-spacing: -0.025em;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  .teaching-item {
+    grid-template-columns: 1fr auto;
+    gap: 8px 12px;
+    padding: 17px 2px;
+  }
+
+  .teaching-date {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 0.72rem;
+  }
+
+  .teaching-institution {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 0.68rem;
+  }
+
+  .teaching-details {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .teaching-details h3 {
+    font-size: 1rem;
+  }
+
+  .teaching-section {
+    margin: 2.5rem 0;
+  }
+}
