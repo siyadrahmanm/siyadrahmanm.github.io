@@ -484,7 +484,7 @@ h1 {
   font-size: 1.12rem;
   font-weight: 550;
   letter-spacing: -0.035em;
-  color: #98675e;
+  color: var(--accent);
   margin: 0 0 1.25rem;
   display: flex;
   align-items: center;
@@ -521,7 +521,7 @@ h1 {
 .teaching-period {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.73rem;
-  color: #a0786d;
+  color: var(--accent);
   letter-spacing: -0.02em;
   white-space: nowrap;
 }
@@ -554,7 +554,7 @@ h1 {
   text-align: right;
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.71rem;
-  color: #827b73;
+  color:var(--accent);
   letter-spacing: -0.025em;
 }
 
